@@ -2,14 +2,31 @@
    SERVICES PAGE STYLES
    =========================== */
 .services-full { padding: 100px 0; }
-.services-list { display: flex; flex-direction: column; gap: 2px; margin-top: 60px; }
+.services-list { display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin-top: 60px; 
+    border: 1px solid var(--black-border);
+    border-radius: 8px;
+    overflow: hidden;
+}
 .service-row {
   background: var(--black-card); border: 1px solid var(--black-border);
   display: grid; grid-template-columns: 80px 1fr auto;
   gap: 40px; align-items: center; padding: 40px 48px;
   transition: var(--transition); position: relative; overflow: hidden;
 }
-.service-row::after { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; background: var(--red); transform: scaleY(0); transition: var(--transition); }
+.service-row::after { content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: var(--red);
+    transform: scaleY(0);
+    transition:
+    var(--transition);
+    transform-origin: top;}
 .service-row:hover { background: #1a1a1a; transform: translateX(6px); }
 .service-row:hover::after { transform: scaleY(1); }
 .service-row .svc-num { font-family: var(--font-display); font-size: 52px; color: rgba(255,255,255,0.08); line-height: 1; }
