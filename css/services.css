@@ -26,12 +26,32 @@
     transform: scaleY(0);
     transition:
     var(--transition);
-    transform-origin: top;}
-.service-row:hover { background: #1a1a1a; transform: translateX(6px); }
-.service-row:hover::after { transform: scaleY(1); }
-.service-row .svc-num { font-family: var(--font-display); font-size: 52px; color: rgba(255,255,255,0.08); line-height: 1; }
-.service-row .svc-body h3 { font-family: var(--font-display); font-size: 32px; letter-spacing: 0.04em; text-transform: uppercase; margin-bottom: 8px; }
-.service-row .svc-body p { font-size: 14px; color: var(--grey); line-height: 1.7; max-width: 560px; }
+    transform-origin: top;
+}
+.service-row:hover { 
+    background: #1a1a1a;
+    transform: translateX(6px);
+    border-color: var(--red);}
+.service-row:hover::after { 
+    transform: scaleY(1); 
+}
+.service-row .svc-num { 
+    font-family: var(--font-display);
+    font-size: 52px;
+    color: rgba(255,255,255,0.08);
+    line-height: 1;
+}
+.service-row .svc-body h3 {
+    font-family: var(--font-display);
+    font-size: 32px; letter-spacing: 0.04em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+.service-row .svc-body p { font-size: 14px;
+    color: var(--grey);
+    line-height: 1.7;
+    max-width: 560px;
+}
 .service-row .svc-tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 14px; }
 .tag { padding: 4px 12px; background: rgba(255,255,255,0.04); border: 1px solid var(--black-border); font-family: var(--font-condensed); font-size: 10px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--grey); border-radius: 100px; }
 .service-row .svc-price { text-align: right; flex-shrink: 0; }
