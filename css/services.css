@@ -101,7 +101,14 @@
 .plan-price sup { font-size: 28px; }
 .plan-desc { font-size: 13px; color: var(--grey); margin-bottom: 32px; padding-bottom: 32px; border-bottom: 1px solid var(--black-border); }
 .pricing-card.featured .plan-desc { color: rgba(255,255,255,0.7); border-bottom-color: rgba(255,255,255,0.2); }
-.plan-features { display: flex; flex-direction: column; gap: 12px; margin-bottom: 36px; }
+.plan-features { display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 36px; 
+    list-style: none;
+    padding: 0;
+}
+
 .plan-features li { display: flex; align-items: center; gap: 10px; font-size: 14px; color: var(--white-dim); }
 .plan-features li::before { content: '✓'; width: 20px; height: 20px; background: rgba(215,43,43,0.15); color: var(--red); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 11px; flex-shrink: 0; }
 .pricing-card.featured .plan-features li { color: var(--white); }
