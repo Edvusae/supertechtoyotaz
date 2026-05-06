@@ -6,3 +6,14 @@ document.addEventListener('DOMContentLoaded', () => {
     card.style.cursor = 'pointer';
   });
 });
+
+// Navigation bar scroll effect
+const nav = document.getElementById('main-nav');
+
+  window.addEventListener('scroll', () => {
+  if (window.scrollY > 50) {
+    nav.classList.add('nav--scrolled');
+  } else {
+    nav.classList.remove('nav--scrolled');
+  }
+});
