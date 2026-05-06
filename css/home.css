@@ -106,3 +106,62 @@
   .nav__menu, .nav__phone { display: none; }
   .nav__toggle { display: flex; }
 }
+
+/* ---- NEW HERO DESIGN ---- */
+.hero-v2 {
+  padding: clamp(6rem, 15vh, 10rem) 0;
+  background: linear-gradient(to right, var(--clr-black) 40%, transparent), 
+              url('your-hero-car-image.jpg') center/cover no-repeat;
+  position: relative;
+}
+
+.hero-v2__content {
+  max-width: 750px;
+}
+
+.hero-v2 h1 {
+  font-size: clamp(3rem, 8vw, 5.5rem);
+  margin: 1.5rem 0;
+  text-wrap: balance; /* Prevents awkward single words on a line */
+}
+
+/* ---- TRUST BAR ---- */
+.trust-bar {
+  background: var(--clr-dark-1);
+  padding: 2rem 0;
+  border-block: 1px solid rgba(255,255,255,0.05);
+  text-align: center;
+}
+
+.trust-bar p {
+  font-family: var(--ff-cond);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--clr-grey);
+}
+
+/* ---- MARKETING CARDS ---- */
+.m-card {
+  padding: 3rem 2rem;
+  background: var(--clr-dark-2);
+  border-left: 2px solid transparent;
+  transition: var(--ts-base);
+}
+
+.m-card:hover {
+  background: var(--clr-dark-1);
+  border-left-color: var(--clr-red);
+  transform: translateY(-5px);
+}
+
+.m-card .icon {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  display: block;
+}
+
+.m-card h3 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
