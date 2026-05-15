@@ -8,11 +8,35 @@
   <link rel="stylesheet" href="css/parts.css" />
 </head>
 <body>
-
-    <nav id="nav-placeholder">
       <!-- Navigation will be loaded here by JS --> 
-       
-    </nav>
+       <nav class="nav nav--shop" id="main-nav">
+  <div class="nav__container">
+    <a href="/" class="nav__logo">
+      <span class="logo-text">SUPERTECH</span>
+      <span class="logo-sub">TOYOTAZ</span>
+    </a>
+
+    <ul class="nav__menu">
+      <li><a href="#engine" class="nav__link">Engine</a></li>
+      <li><a href="#suspension" class="nav__link">Suspension</a></li>
+      <li><a href="#maintenance" class="nav__link">Maintenance</a></li>
+      <li><a href="#accessories" class="nav__link">Accessories</a></li>
+    </ul>
+
+    <div class="nav__actions">
+      <div class="search-box">
+        <input type="text" placeholder="Search Part..." id="partSearch">
+        <span class="search-icon">🔍</span>
+      </div>
+      <a href="/cart" class="nav__cart">
+        <span class="icon">🛒</span>
+        <span class="cart-count">0</span>
+      </a>
+      <a href="/book" class="btn btn--primary btn--small">Get a Quote</a>
+    </div>
+  </div>
+</nav>
+
   <header id="nav-placeholder"></header>
 
   <main>
