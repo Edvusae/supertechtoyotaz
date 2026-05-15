@@ -1,5 +1,74 @@
 /* ---- PARTS PAGE STYLES ---- */
 
+/* ---- SHOP SPECIFIC NAVIGATION ---- */
+.nav--shop {
+  background: var(--clr-black);
+  border-bottom: 2px solid var(--clr-red); /* Stronger indicator for shop */
+}
+
+/* Search Box Styling */
+.search-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-box input {
+  background: var(--clr-dark-2);
+  border: 1px solid #333;
+  color: var(--clr-white);
+  padding: 8px 35px 8px 15px;
+  font-family: var(--ff-cond);
+  font-size: 0.8rem;
+  width: 180px;
+  transition: width 0.3s ease;
+}
+
+.search-box input:focus {
+  width: 250px;
+  outline: none;
+  border-color: var(--clr-red);
+}
+
+.search-icon {
+  position: absolute;
+  right: 12px;
+  font-size: 0.8rem;
+  color: var(--clr-grey);
+}
+
+/* Cart Indicator */
+.nav__cart {
+  position: relative;
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: var(--clr-white);
+  display: flex;
+  align-items: center;
+}
+
+.cart-count {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  background: var(--clr-red);
+  color: white;
+  font-size: 0.65rem;
+  font-weight: 700;
+  width: 18px;
+  height: 18px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+}
+
+/* Mobile Tweaks */
+@media (max-width: 1024px) {
+  .search-box input { width: 120px; }
+  .search-box input:focus { width: 150px; }
+  .nav__menu { display: none; } /* Use a drawer for mobile */
+}
+
 /* Filter Bar */
 .shop-controls {
     border-block: 1px solid rgba(255, 255, 255, 0.05);
