@@ -18,33 +18,35 @@
   <script src="js/home.js" defer></script>
 </head>
 <body>
-<nav class="nav" id="main-nav">
+<nav class="nav nav--shop" id="main-nav">
   <div class="nav__container">
-    <!-- Brand Branding -->
+    
     <a href="/" class="nav__logo">
       <span class="logo-text">SUPERTECH</span>
       <span class="logo-sub">TOYOTAZ</span>
     </a>
 
-    <!-- Main Links -->
     <ul class="nav__menu">
       <li><a href="/services" class="nav__link">Services</a></li>
-      <li><a href="builds.html" class="builds.html">Our Builds</a></li>
-      <li><a href="parts.html" class="nav__link">Parts Shop</a></li>
+      <li><a href="/builds" class="nav__link">Our Builds</a></li>
+      <li><a href="/parts" class="nav__link nav__link--active">Parts Shop</a></li>
       <li><a href="/about" class="nav__link">About</a></li>
     </ul>
 
-    <!-- Marketing CTA -->
     <div class="nav__actions">
-      <a href="tel:+123456789" class="nav__phone">0123 456 789</a>
-      <a href="/book" class="btn btn--primary btn--small">Get a Quote</a>
+      <div class="search-box">
+        <input type="text" placeholder="Search Part...">
+        <span class="search-icon">🔍</span>
+      </div>
       
-      <!-- Mobile Toggle -->
-      <button class="nav__toggle" aria-label="Toggle Menu">
-        <span></span>
-        <span></span>
-      </button>
+      <a href="/cart" class="nav__cart">
+        <span class="cart-icon">🛒</span>
+        <span class="cart-count">0</span>
+      </a>
+      
+      <a href="/book" class="btn btn--nav-cta">Get a Quote</a>
     </div>
+
   </div>
 </nav>
 
