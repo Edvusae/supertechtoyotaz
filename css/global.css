@@ -41,6 +41,44 @@
   font-size: 16px;
 }
 
+/* Strip browser default bullet layouts */
+.nav__menu {
+  display: flex;             /* Forces links onto a clean horizontal line */
+  align-items: center;       /* Centers links vertically */
+  gap: 2.5rem;               /* Adds uniform space between menu items */
+  list-style: none;          /* THE FIX: Removes the bullet points entirely */
+  margin: 0;
+  padding: 0;
+}
+
+/* Ensure individual wrapper line items don't add hidden padding */
+.nav__menu li {
+  list-style-type: none;     /* Double safety block to kill bullets */
+  margin: 0;
+  padding: 0;
+}
+
+/* Setup structural flex grid rules for the entire bar container */
+.nav__container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between; /* Pushes Logo to left, Menu to middle, CTA to right */
+  align-items: center;
+}
+
+/* Quick styles for the layout matching image_ee319d */
+.nav__phone {
+  font-family: 'Barlow Condensed', sans-serif;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-right: 1.5rem;
+}
+
 body {
   background: var(--clr-black);
   color: var(--clr-white);
