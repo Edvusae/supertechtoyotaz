@@ -79,6 +79,130 @@
   margin-right: 1.5rem;
 }
 
+/* ---- SITE FOOTER STYLES ---- */
+.site-footer {
+  background: #0a0a0a;
+  color: #fff;
+  padding: 4rem 0 0 0;
+  border-top: 3px solid #E8001D; /* Clean red accent line on top */
+  font-family: 'Barlow Condensed', sans-serif;
+  letter-spacing: 0.05em;
+}
+
+.footer__container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem 3rem 2rem;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr; /* Brand gets more room */
+  gap: 3rem;
+}
+
+/* Column General Styling */
+.footer__col {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.4rem;
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  letter-spacing: 1px;
+}
+
+/* Description Text */
+.footer__description {
+  color: #999;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-top: 1rem;
+  max-width: 320px;
+}
+
+/* Lists Reset */
+.footer__links, 
+.footer__info {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+/* Links Styling */
+.footer__links a {
+  color: #aaa;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  transition: color 0.2s ease, padding-left 0.2s ease;
+}
+
+.footer__links a:hover {
+  color: #E8001D;
+  padding-left: 5px; /* Subtle kinetic slide out on hover */
+}
+
+/* Contact Info Items */
+.footer__info li {
+  color: #aaa;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer__info .icon {
+  color: #E8001D;
+}
+
+/* Bottom Copyright Strip */
+.footer__bottom {
+  background: #050505;
+  border-top: 1px solid #1a1a1a;
+  padding: 1.5rem 0;
+  color: #666;
+  font-size: 0.85rem;
+}
+
+.footer__bottom-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer__dev-link {
+  color: #999;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.footer__dev-link:hover {
+  color: #E8001D;
+}
+
+/* Responsive Breakpoint for Mobile/Tablets */
+@media (max-width: 900px) {
+  .footer__container {
+    grid-template-columns: 1fr; /* Stacks column by column */
+    gap: 2.5rem;
+  }
+  
+  .footer__bottom-container {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+}
+
 body {
   background: var(--clr-black);
   color: var(--clr-white);
