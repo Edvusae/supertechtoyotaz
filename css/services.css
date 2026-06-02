@@ -1,1 +1,518 @@
 
+/* ==========================================================================
+   SERVICES PAGE COMPONENT STYLES
+   ========================================================================== */
+
+/* --- Page Hero Banner --- */
+.page-hero {
+  position: relative;
+  padding: 8rem 2rem 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.ghost-word {
+  position: absolute;
+  top: -1rem;
+  right: -2rem;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(6rem, 15vw, 16rem);
+  line-height: 1;
+  color: var(--ghost-white, rgba(0, 0, 0, 0.03));
+  font-weight: 700;
+  letter-spacing: 4px;
+  pointer-events: none;
+  z-index: -1;
+  user-select: none;
+}
+
+.label-row {
+  margin-bottom: 1rem;
+}
+
+.label-row span {
+  font-family: 'Barlow Condensed', sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--red, #e31b23);
+  font-size: 0.95rem;
+  border-left: 3px solid var(--red, #e31b23);
+  padding-left: 0.75rem;
+}
+
+.page-hero h1 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(3rem, 7vw, 5.5rem);
+  line-height: 0.95;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+.page-hero p {
+  font-family: 'Barlow', sans-serif;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  color: var(--dark-grey, #555);
+  max-width: 650px;
+  line-height: 1.6;
+}
+
+/* --- Filter Bar Navigation --- */
+.filter-bar {
+  background: var(--dark-bg, #111116);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 3px solid var(--red, #e31b23);
+}
+
+.filter-bar-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none; /* Firefox */
+}
+
+.filter-bar-inner::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
+.ftab {
+  background: transparent;
+  border: none;
+  color: var(--light-grey, #aaa);
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 1.25rem 2rem;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+  letter-spacing: 0.05em;
+}
+
+.ftab:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.ftab.active {
+  color: #fff;
+  background: var(--red, #e31b23);
+}
+
+/* --- Service Rows Structural Layout --- */
+.svc-list {
+  max-width: 1200px;
+  margin: 4rem auto;
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+}
+
+.svc-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  padding-bottom: 6rem;
+  border-bottom: 1px solid var(--border-color, #eee);
+}
+
+@media (min-width: 902px) {
+  .svc-row {
+    grid-template-columns: 320px 1fr;
+    gap: 4rem;
+  }
+}
+
+/* Row Meta Left Column */
+.svc-meta {
+  position: var(--sticky-meta, static);
+  top: 6rem;
+  height: max-content;
+}
+
+@media (min-width: 902px) {
+  .svc-meta {
+    --sticky-meta: sticky;
+  }
+}
+
+.svc-tag {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  color: var(--red, #e31b23);
+  margin-bottom: 0.5rem;
+}
+
+.svc-meta h2 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 2.25rem;
+  font-weight: 700;
+  line-height: 1.1;
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+  margin-bottom: 1rem;
+}
+
+.svc-from {
+  font-family: 'Barlow', sans-serif;
+  font-size: 1.1rem;
+  color: var(--grey, #666);
+}
+
+.svc-from strong {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 2rem;
+  color: var(--dark-bg, #111116);
+  font-weight: 700;
+  vertical-align: -1px;
+}
+
+/* Row Content Right Column */
+.svc-content p {
+  font-family: 'Barlow', sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: var(--body-color, #333);
+  margin-bottom: 1.5rem;
+}
+
+/* Image Dynamic Grid Layout */
+.svc-imgs {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  height: 240px;
+}
+
+.svc-img {
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+  background: #f5f5f7;
+}
+
+.svc-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.svc-row:hover .svc-img img {
+  transform: scale(1.04);
+}
+
+/* Placeholder Asset Blocks */
+.svc-img.placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  background: #f0f0f4;
+  border: 1px dashed #d0d0d8;
+  color: #888;
+}
+
+/* Feature Checklist Blocks */
+.svc-features {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.85rem;
+  margin-top: 2rem;
+  background: #f9f9fc;
+  padding: 2rem;
+  border-radius: 6px;
+  border-left: 4px solid var(--dark-bg, #111116);
+}
+
+@media (min-width: 600px) {
+  .svc-features {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.svc-feature {
+  font-family: 'Barlow', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #222;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.svc-feature::before {
+  content: "✓";
+  color: var(--red, #e31b23);
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+/* --- Pricing Package Tier Panels --- */
+.pricing-section {
+  background: #f4f4f8;
+  padding: 6rem 2rem;
+}
+
+.pricing-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.pricing-inner h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  line-height: 0.95;
+  text-transform: uppercase;
+  margin-bottom: 4rem;
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  align-items: stretch;
+}
+
+@media (min-width: 902px) {
+  .pricing-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.price-card {
+  background: #fff;
+  border: 1px solid #e0e0e8;
+  padding: 3rem 2rem;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.price-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+}
+
+/* Premium Highlighted Card Configuration */
+.price-card.popular {
+  border: 2px solid var(--red, #e31b23);
+  box-shadow: 0 10px 30px rgba(227, 27, 35, 0.06);
+}
+
+.price-card.popular::before {
+  content: "MOST POPULAR";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--red, #e31b23);
+  color: #fff;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  padding: 0.35rem 1.25rem;
+  border-radius: 50px;
+  white-space: nowrap;
+}
+
+.price-tier {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  margin-bottom: 0.5rem;
+}
+
+.price-amount {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 3.75rem;
+  line-height: 1;
+  color: var(--dark-bg, #111116);
+  margin-bottom: 1rem;
+}
+
+.price-amount small {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--grey, #777);
+  letter-spacing: 0.02em;
+}
+
+.price-desc {
+  font-family: 'Barlow', sans-serif;
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+  min-height: 2.75rem;
+}
+
+.price-items {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 3rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.price-items li {
+  font-family: 'Barlow', sans-serif;
+  font-size: 0.95rem;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.price-items li::before {
+  content: "✓";
+  color: #2e7d32;
+  font-weight: 700;
+}
+
+/* Unavailable Option Styles */
+.price-items li.na {
+  color: #bbb;
+  text-decoration: line-through;
+}
+
+.price-items li.na::before {
+  content: "✕";
+  color: #ccc;
+}
+
+.price-card .btn {
+  margin-top: auto;
+  width: 100%;
+  text-align: center;
+}
+
+/* --- Call To Action Conversion Section --- */
+.cta-strip {
+  background: linear-gradient(135deg, #111116 0%, #1a1a24 100%);
+  color: #fff;
+  padding: 6rem 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 4px solid var(--red, #e31b23);
+}
+
+.cta-strip h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  line-height: 0.95;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  letter-spacing: 0.02em;
+}
+
+.cta-strip p {
+  font-family: 'Barlow', sans-serif;
+  font-size: 1.15rem;
+  color: var(--light-grey, #ccc);
+  max-width: 500px;
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+}
+
+.btn-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+/* --- UI Button Primitives --- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 1.05rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0.95rem 2.25rem;
+  letter-spacing: 0.05em;
+  border-radius: 4px;
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+.btn-red {
+  background: var(--red, #e31b23);
+  color: #fff;
+  border: 1px solid var(--red, #e31b23);
+}
+
+.btn-red:hover {
+  background: #bd1219;
+  border-color: #bd1219;
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--dark-bg, #111116);
+  border: 2px solid var(--dark-bg, #111116);
+}
+
+.btn-ghost:hover {
+  background: var(--dark-bg, #111116);
+  color: #fff;
+}
+
+.cta-strip .btn-ghost {
+  color: #fff;
+  border-color: #fff;
+}
+
+.cta-strip .btn-ghost:hover {
+  background: #fff;
+  color: var(--dark-bg, #111116);
+}
+
+.btn-dark {
+  background: #fff;
+  color: var(--dark-bg, #111116);
+  border: 1px solid #fff;
+}
+
+.btn-dark:hover {
+  background: transparent;
+  color: #fff;
+}
+
+/* Utility Arrow Glyphs */
+.btn.arr::after {
+  content: "→";
+  margin-left: 0.6rem;
+  font-size: 1.1rem;
+  transition: transform 0.25s ease;
+}
+
+.btn.arr:hover::after {
+  transform: translateX(4px);
+}
