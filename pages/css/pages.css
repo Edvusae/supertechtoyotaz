@@ -1,0 +1,613 @@
+/* ==========================================
+   SUPERTECH TOYOTAZ — ABOUT PAGE STYLES
+   File: css/pages.css
+   ========================================== */
+
+/* --- ROOT UTILITIES & DESIGN SYSTEM TOKENS --- */
+:root {
+  --red: #E8001D;
+  --dark-1: #050505;
+  --dark-2: #0d0d0d;
+  --dark-3: #141414;
+  --white: #ffffff;
+  --grey: #888888;
+  --grey-light: #cccccc;
+  --border-color: rgba(255, 255, 255, 0.08);
+  --max-w: 1400px;
+  --gutter: 2rem;
+  --ff-display: 'Bebas Neue', sans-serif;
+  --ff-body: 'Barlow Condensed', sans-serif;
+  --ts-base: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+/* Base Body Override Guard */
+body.noise {
+  background-color: var(--dark-1);
+  color: var(--white);
+  font-family: var(--ff-body);
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Layout Container Reset */
+.container {
+  width: 100%;
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding-inline: var(--gutter);
+  box-sizing: border-box;
+}
+
+/* Typography Defaults */
+.h1 {
+  font-family: var(--ff-display);
+  font-size: clamp(3.5rem, 8vw, 6.5rem);
+  line-height: 0.95;
+  text-transform: uppercase;
+  margin: 0 0 1.5rem 0;
+  color: var(--white);
+}
+
+.h2 {
+  font-family: var(--ff-display);
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  line-height: 1;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  color: var(--white);
+}
+
+.h3 {
+  font-family: var(--ff-display);
+  font-size: 1.8rem;
+  letter-spacing: 0.05em;
+  color: var(--white);
+  text-transform: uppercase;
+}
+
+/* Section Labels */
+.section-label {
+  display: inline-block;
+  color: var(--red);
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  border-left: 3px solid var(--red);
+  padding-left: 12px;
+}
+
+/* ==========================================
+   1. PAGE HERO
+   ========================================== */
+.page-hero {
+  position: relative;
+  padding: 10rem var(--gutter) 6rem;
+  max-width: var(--max-w);
+  margin: 0 auto;
+  background: var(--dark-1);
+  overflow: hidden;
+}
+
+.page-hero .bg-text {
+  position: absolute;
+  top: 2rem;
+  right: -2rem;
+  font-family: var(--ff-display);
+  font-size: clamp(8rem, 20vw, 18rem);
+  color: rgba(255, 255, 255, 0.02);
+  line-height: 0.8;
+  user-select: none;
+  pointer-events: none;
+  font-weight: 900;
+}
+
+.page-hero p {
+  font-size: 1.25rem;
+  color: var(--grey-light);
+  max-width: 650px;
+  line-height: 1.6;
+}
+
+/* ==========================================
+   2. STATS SECTION
+   ========================================== */
+.stats-section {
+  background: var(--dark-2);
+  border-y: 1px solid var(--border-color);
+  padding-block: 4rem;
+}
+
+.stats-inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding-inline: var(--gutter);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2.5rem;
+}
+
+.stat-item {
+  border-left: 2px solid var(--red);
+  padding-left: 1.5rem;
+}
+
+.stat-item .number {
+  font-family: var(--ff-display);
+  font-size: clamp(3rem, 5vw, 4.5rem);
+  color: var(--white);
+  line-height: 1;
+  margin-bottom: 0.25rem;
+}
+
+.stat-item .label {
+  color: var(--grey);
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+/* ==========================================
+   3. STORY SECTION
+   ========================================== */
+.story-section {
+  padding-block: 8rem;
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding-inline: var(--gutter);
+}
+
+.story-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 5rem;
+  align-items: start;
+  margin-top: 2rem;
+}
+
+/* Visual Collage Wrapper */
+.story-visual {
+  position: relative;
+  min-height: 500px;
+}
+
+.story-img-main {
+  width: 85%;
+  height: 450px;
+  background: #1a1a1a url('../img/workshop-main.jpg') center/cover no-repeat;
+  border: 1px solid var(--border-color);
+  position: relative;
+}
+
+.story-img-accent {
+  position: absolute;
+  bottom: -2rem;
+  right: 0;
+  width: 55%;
+  height: 280px;
+  background: #252525 url('../img/workshop-accent.jpg') center/cover no-repeat;
+  border: 4px solid var(--dark-1);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+}
+
+.story-text p {
+  color: var(--grey-light);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+/* Master Tech Blockquote */
+.story-quote {
+  background: var(--dark-2);
+  border-left: 4px solid var(--red);
+  padding: 2rem;
+  margin-block: 2.5rem;
+}
+
+.story-quote blockquote {
+  margin: 0 0 1rem 0;
+  font-size: 1.2rem;
+  font-style: italic;
+  color: var(--white);
+  line-height: 1.5;
+}
+
+.story-quote cite {
+  font-family: var(--ff-body);
+  font-size: 0.85rem;
+  color: var(--red);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-style: normal;
+  font-weight: 700;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 1rem 2rem;
+  font-family: var(--ff-display);
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  transition: var(--ts-base);
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: var(--red);
+  color: var(--white);
+}
+
+.btn-primary:hover {
+  background: #ff1a35;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(232, 0, 29, 0.3);
+}
+
+.btn-dark {
+  background: var(--dark-1);
+  color: var(--white);
+}
+
+.btn-dark:hover {
+  background: var(--white);
+  color: var(--dark-1);
+}
+
+.btn-outline {
+  border: 1px solid var(--white);
+  color: var(--white);
+}
+
+.btn-outline:hover {
+  background: var(--white);
+  color: var(--dark-1);
+}
+
+/* ==========================================
+   4. TIMELINE SECTION
+   ========================================== */
+.timeline-section {
+  background: var(--dark-2);
+  padding-block: 8rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.timeline-inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding-inline: var(--gutter);
+}
+
+.timeline {
+  position: relative;
+  margin-top: 4rem;
+  padding-left: 2rem;
+  border-left: 2px solid var(--border-color);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 3.5rem;
+  padding-left: 1.5rem;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -2.6rem;
+  top: 0.25rem;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background: var(--dark-1);
+  border: 2px solid var(--red);
+  transition: var(--ts-base);
+}
+
+.timeline-item:hover::before {
+  background: var(--red);
+  box-shadow: 0 0 15px var(--red);
+}
+
+.timeline-year {
+  font-family: var(--ff-display);
+  font-size: 1.5rem;
+  color: var(--red);
+  margin-bottom: 0.25rem;
+}
+
+.timeline-item h3 {
+  margin-bottom: 0.5rem;
+}
+
+.timeline-item p {
+  color: var(--grey);
+  max-width: 700px;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+/* ==========================================
+   5. TEAM SECTION
+   ========================================== */
+.team-section {
+  padding-block: 8rem;
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding-inline: var(--gutter);
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2.5rem;
+  margin-top: 3rem;
+}
+
+.team-card {
+  background: var(--dark-2);
+  border: 1px solid var(--border-color);
+  transition: var(--ts-base);
+}
+
+.team-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--red);
+}
+
+.team-photo {
+  height: 280px;
+  background: var(--dark-3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.team-placeholder {
+  font-family: var(--ff-display);
+  font-size: 3.5rem;
+  color: rgba(255, 255, 255, 0.15);
+  letter-spacing: 2px;
+}
+
+.team-info {
+  padding: 1.5rem;
+}
+
+.team-info h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.team-info .role {
+  color: var(--red);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.team-info .certs {
+  color: var(--grey);
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+
+/* ==========================================
+   6. VALUES SECTION (GRID 3)
+   ========================================== */
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.5rem;
+}
+
+.card {
+  background: var(--dark-1);
+  border: 1px solid var(--border-color);
+  padding: 2.5rem;
+  transition: var(--ts-base);
+}
+
+.card:hover {
+  border-color: var(--red);
+  transform: translateY(-5px);
+}
+
+/* ==========================================
+   7. CTA BANNER
+   ========================================== */
+.cta-banner {
+  background: var(--red);
+  padding-block: 6rem;
+  text-align: center;
+  color: var(--white);
+  padding-inline: var(--gutter);
+}
+
+.cta-banner h2 {
+  font-family: var(--ff-display);
+  font-size: clamp(3rem, 6vw, 5rem);
+  line-height: 0.95;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.cta-banner p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto 2.5rem;
+}
+
+.cta-btns {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+/* ==========================================
+   8. FOOTER STYLES
+   ========================================== */
+footer {
+  background: #000000;
+  border-top: 1px solid var(--border-color);
+  padding-top: 5rem;
+}
+
+/* Target footer containers cleanly using class or direct structure */
+footer > div:not(.footer__bottom) {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding-inline: var(--gutter);
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1.2fr;
+  gap: 4rem;
+  padding-bottom: 4rem;
+}
+
+.footer__col .logo-text {
+  font-family: var(--ff-display);
+  font-size: 1.8rem;
+  color: var(--white);
+  display: block;
+}
+
+.footer__col .logo-sub {
+  font-family: var(--ff-display);
+  font-size: 1rem;
+  color: var(--red);
+  letter-spacing: 0.2em;
+  display: block;
+}
+
+.footer__description {
+  color: var(--grey);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-top: 1.2rem;
+  max-width: 320px;
+}
+
+.footer__title {
+  font-family: var(--ff-display);
+  font-size: 1.4rem;
+  color: var(--white);
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  letter-spacing: 1px;
+}
+
+.footer__links, 
+.footer__info {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer__links li {
+  margin-bottom: 0.75rem;
+}
+
+.footer__links a {
+  color: var(--grey);
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+}
+
+.footer__links a:hover {
+  color: var(--red);
+}
+
+.footer__info li {
+  color: var(--grey);
+  font-size: 0.95rem;
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer__bottom {
+  border-top: 1px solid var(--border-color);
+  background: #030303;
+  padding-block: 1.5rem;
+}
+
+.footer__bottom-container {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding-inline: var(--gutter);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+  color: var(--grey);
+}
+
+.footer__dev-link {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.footer__dev-link:hover {
+  color: var(--red);
+}
+
+/* ==========================================
+   9. RESPONSIVE BREAKPOINTS
+   ========================================== */
+@media (max-width: 992px) {
+  .story-layout {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .story-visual {
+    min-height: 380px;
+  }
+
+  .story-img-main {
+    width: 100%;
+    height: 350px;
+  }
+
+  .story-img-accent {
+    width: 50%;
+    height: 200px;
+    bottom: -1rem;
+  }
+
+  footer > div:not(.footer__bottom) {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .timeline {
+    padding-left: 1.5rem;
+  }
+  
+  .timeline-item {
+    padding-left: 0.5rem;
+  }
+
+  .footer__bottom-container {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+}
