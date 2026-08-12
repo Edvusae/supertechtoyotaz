@@ -3,6 +3,96 @@
    ========================================================================== */
 
 /* --- Page Hero Banner --- */
+/* ---- NAVIGATION STYLES ---- */
+.nav--shop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90px;
+  background: #0a0a0a;
+  border-bottom: 2px solid #E8001D;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+}
+
+.nav__container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding-inline: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo Styling */
+.nav__logo {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-text {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.8rem;
+  color: #ffffff;
+  line-height: 0.9;
+  letter-spacing: 1px;
+}
+
+.logo-sub {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 0.95rem;
+  color: #E8001D;
+  letter-spacing: 0.25em;
+}
+
+/* Nav Menu (Flex row + remove dots) */
+.nav__menu {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav__link {
+  color: #ffffff;
+  text-decoration: none;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  transition: color 0.2s ease;
+}
+
+.nav__link:hover,
+.nav__link--active {
+  color: #E8001D;
+}
+
+/* Header Button */
+.btn--nav-cta {
+  background: #E8001D;
+  color: #ffffff;
+  padding: 0.6rem 1.4rem;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+.btn--nav-cta:hover {
+  background: #ff1a35;
+}
+
+
 .page-hero {
   position: relative;
   padding: 8rem 2rem 4rem 2rem;
