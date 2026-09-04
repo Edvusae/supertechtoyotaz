@@ -3,12 +3,15 @@
 .builds-section {
     padding-block: 6rem;
     background-color: #050505;
+    width: 100%;
 }
 
 .builds-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
-    gap: 3.5rem;
+    /* FIX: Prevents layout overflow on smaller viewports */
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+    gap: 2.5rem;
+    width: 100%;
 }
 
 /* Hardened Industrial Card Frame */
@@ -18,14 +21,18 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), 
+                border-color 0.4s ease, 
+                box-shadow 0.4s ease;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 /* Hover States: Glow and Lift */
 .build-card:hover {
     transform: translateY(-8px);
     border-color: #E8001D;
-    box-shadow: 0 20px 40px rgba(232, 0, 29, 0.08);
+    box-shadow: 0 20px 40px rgba(232, 0, 29, 0.12);
 }
 
 /* Advanced Image Handling */
@@ -35,6 +42,7 @@
     overflow: hidden;
     background: #000;
     border-bottom: 2px solid #1a1a1a;
+    width: 100%;
 }
 
 .build-card:hover .build-image-wrapper {
@@ -75,6 +83,7 @@
     letter-spacing: 1px;
     text-transform: uppercase;
     clip-path: polygon(0 0, 100% 0, 88% 100%, 0 100%);
+    z-index: 2;
 }
 
 /* Tech Floating Metrics Layout */
@@ -87,6 +96,7 @@
     opacity: 0;
     transform: translateY(10px);
     transition: all 0.3s ease;
+    z-index: 2;
 }
 
 .build-card:hover .build-tech-metrics {
@@ -103,6 +113,7 @@
     font-size: 0.75rem;
     font-weight: 700;
     text-transform: uppercase;
+    white-space: nowrap;
 }
 
 .metric-chip span {
@@ -122,9 +133,10 @@
     font-family: 'Barlow Condensed', sans-serif;
     font-size: 0.75rem;
     font-weight: 700;
-    color: #e8001d;
+    color: #E8001D;
     letter-spacing: 0.2em;
     margin-bottom: 0.5rem;
+    text-transform: uppercase;
 }
 
 .build-content h3 {
@@ -133,11 +145,12 @@
     letter-spacing: 1px;
     color: #fff;
     text-transform: uppercase;
-    margin-bottom: 0.75rem;
+    margin: 0 0 0.75rem 0;
+    line-height: 1;
 }
 
 .build-short-desc {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     color: #888;
     line-height: 1.5;
     margin-bottom: 1.5rem;
@@ -159,12 +172,15 @@
     color: #ccc;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
 }
 
 .specs li span {
     font-weight: 600;
     color: #666;
     text-transform: uppercase;
+    white-space: nowrap;
 }
 
 /* Kinetic Link Button Assembly */
@@ -201,11 +217,18 @@
 }
 
 /* Responsive Adjustments */
-@media (max-width: 500px) {
+@media (max-width: 768px) {
     .builds-grid {
-        grid-template-columns: 1fr;
+        gap: 2rem;
     }
+}
+
+@media (max-width: 500px) {
     .build-content {
         padding: 1.5rem;
+    }
+
+    .build-tech-metrics {
+        display: none; /* Hides metric overlays on mobile to avoid covering image */
     }
 }
